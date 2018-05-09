@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <style>
+    body{
+text-align: center;
+      background-image:url("back.jpg");
+      padding: 10px;
+    }
+    <h1>BIKELIST</h1>
+    <title><h3>Catálogo motos sport</h3></title>
+* {
+  box-sizing: border-box;
+}
+p{
+  text-decoration: red;
+  color: white;
+}
+h1{
+  color:white;
+  font-family: fantasy;
+  font-style: oblique;
+}
+ul {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  background-image: url('fondo1.jpg');
+  color: white;
+  padding: 10px;
+  border: 2px solid red;
+}
+
+li {
+  display: inline-block;
+  text-align: center;
+    text-align: center;
+}
+
+li a {
+    display: inline-block;
+    text-decoration: red;
+    color: white;
+    text-align: center;
+    padding: 12px 14px;
+}
+
+li a:hover {
+  display: block;
+  text-align: center;
+    border: 3px solid aqua;
+    background-color: #111;
+}
+img {
+    opacity: 0.9;
+    filter: alpha(opacity=50);
+}
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+.active {
+    background-color: red;
+    position: relative;
+    display: inline-block;
+}
+.marca{
+  background-color: grey;
+}
+.header{
+  text-align: center;
+      background-image: url('gif5.gif');
+      color: white;
+      padding: 5px;
+      border: 2px solid red;
+  } .footer {
+    text-align: center;
+        background-color: aqua;
+        color: white;
+        padding: 5px;
+        border: 2px solid red;
+}
+.center {
+  background-image: url('fondo1.jpg');
+  text-align: center;
+  color: white;
+  padding: 5px;
+
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {
+
+    width: 25%;
+}
+.columncontent {
+    background-image: url("gif3.gif");
+  text-decoration: white
+    right: 8px;
+    top: 10px;
+    padding: 5px;
+  }
+.menu ul {
+  top: 80px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    top: 80px;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color:aqua ;
+    color: black;
+}
+.menu li:hover {
+  top: 80px;
+    background-color: #0099cc;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.dropbtn{
+  position: relative;
+background-color: #4CAF50;
+ color: white;
+ padding: 16px;
+ font-size: 16px;
+ border: none;
+ cursor: pointer;
+}
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    color: aqua
+    border: 3px solid red;
+}
+.floating-box2{
+display: inline-block;
+text-align: top;
+  width: auto;
+  height: auto;
+  margin: 15px;
+}
+.logotipo{
+  opacity: 1;
+  width: 80px;
+  height:auto;
+}
+.creado{
+  color: black;
+}
+.logotip{
+  position: fixed;
+  top: 50px;
+  left: 80px;
+}
+</style>
+  </head>
+  <body>
+
+    <div class="header">
+<img src="logotip.jpg" alt="bikelist" class="logotip">
+      <h1>BIKELIST</h1>
+</div>
+
+<div class="floating-box2">
+<div class="columncontent">
+  <p>Bienvenido a BIKELIST, la única página web donde encontraras todo tipo de información sobre las motos, desde sus modelos, sus accesorios, etc. Si encuentras algo que se podría mejorar deja un comentario en el apartado de Contactanos y lo arreglaremos. Vamos, échale un vistazo!</p>
+</div>
+</div>
+
+<ul>
+
+  <div class="center">
+  <li>
+  <button onclick="myFunction()">CONTÁCTANOS</button>
+    <p id="Contactanos"></p>
+    <script>
+    function myFunction() {
+        var txt;
+        var person = prompt("Introduce tu nombre:", "EDU");
+        var email = prompt("Introduce tu correo:", "example@id.com");
+        var message = prompt("Escribe aquí tu queja/sugerencia", "");
+        if (message == null || person == "") {
+            txt = "";
+        }
+        if (email == null || email == "") {
+            txt = "";
+        }
+        if (message == null || message == "") {
+            txt = "";
+        }
+        else {
+            txt = "Hola " + person + "!" + "  " + "Hemos recibido tu correo con éxito";
+        }
+        document.getElementById("Contactanos").innerHTML = txt;
+    }
+    </script>
+
+  </li>
+  <br>
+<div class="floating-box">
+    <a href="aprilia.html" target="_blank"</a>
+    <div class="dropdown">
+  <button class="dropbtn">APRILIA</button>
+  <div class="dropdown-content">
+    <a href="rsv4rr.html">RSV4 RR</a>
+    <a href="rsv4rf.html">RSV4 RF</a>
+    <a href="rsv4fw.html">RSV4 FW</a>
+  </div>
+</div>
+<br>
+<a href="aprilia.html" target="_blank"</a><img src="april.jpg" alt="LOGO APRILIA" width="150" height="150">
+</div>
+
+<div class="floating-box">
+  <a href="bmw.html" target="_blank"</a>
+    <div class="dropdown">
+  <button class="dropbtn">BMW</button>
+  <div class="dropdown-content">
+    <a href="s1000rr.html">S 1000 RR</a>
+    <a href="r1200rs.html">R 1200 RS</a>
+    <a href="hp4.html">HP4 RACE</a>
+  </div>
+  </div>
+  <br>
+  <a href="bmw.html" target="_blank"</a><img src="logobmw.jpg" alt="LOGO BMW" width="150" height="150">
+</div>
+
+<div class="floating-box">
+  <a href="ducati.html" target="_blank"</a>
+    <div class="dropdown">
+  <button class="dropbtn">DUCATI</button>
+  <div class="dropdown-content">
+    <a href="panigale959.html">Panigale 959 Corse</a>
+    <a href="panigale1299.html">1299 Panigale R FE</a>
+    <a href="panigalev4.html">Panigale V4</a>
+    <a href="#">Panigale V4 Speciale</a>
+    <a href="#">SuperSPORT</a>
+    <a href="#">SuperSPORT S</a>
+  </div>
+  </div>
+  <br>
+  <a href="ducati.html" target="_blank"</a><img src="logoducati.jpg" alt="LOGO DUCATI" width="150" height="150">
+  </div>
+
+  <div class="floating-box">
+    <a href="honda.html" target="_blank"</a>
+      <div class="dropdown">
+    <button class="dropbtn">HONDA</button>
+    <div class="dropdown-content">
+      <a href="cbr500r.html">CBR 500 R</a>
+      <a href="cbr650.html">CBR 650 F</a>
+      <a href="cbrfireblade.html">CBR 1000 RR Fireblade</a>
+      <a href="firebladesp.html">CBR 1000 RR Fireblade SP</a>
+    </div>
+    </div>
+    <br>
+    <a href="honda.html" target="_blank"</a><img src="logohonda.jpg" alt="logo honda" width="150" height="150">
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="footer">
+
+    <a href="https://twitter.com/Bikelist1">Twitter: @bikelist </a><br>
+    <a href="https://www.instagram.com/bikelist.es"> Instagram: @bikelist.es </a>
+       <br>
+<br>
+<div class="creado">
+    Creado por Nico Viader y Carlos Sancho
+</div>
+<br>
+</div>
+<br>
+</body>
+</html>
